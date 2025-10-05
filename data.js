@@ -1,6 +1,6 @@
 const products = [
     // Frutas y Verduras
-    { id: 1, name: 'Plátano orgánico', price: 1.50, image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=300&h=200&q=80', category: 'Frutas y Verduras', featured: true, description: 'Plátanos orgánicos, dulces y llenos de potasio.' },
+    { id: 1, name: 'Plátano', price: 1.50, image: 'https://3.bp.blogspot.com/-wbO46JPH0y0/UrT88uFtw0I/AAAAAAAAHNU/6DPRUQ_5qaM/s640/platanos.jpg', category: 'Frutas y Verduras', featured: true, description: 'Plátanos orgánicos, dulces y llenos de potasio.' },
     { id: 2, name: 'Manzana', price: 2.10, image: 'https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=300&h=200&q=80', category: 'Frutas y Verduras', featured: false, description: 'Manzanas rojas crujientes, perfectas para cualquier momento.' },
     { id: 3, name: 'Palta', price: 4.50, image: 'https://jumboargentina.vtexassets.com/arquivos/ids/448302/Palta-Hass-Premium-Por-Unidad-1-29308.jpg?v=636562507417630000', category: 'Frutas y Verduras', featured: true, description: 'Palta Hass cremosa, ideal para tus desayunos y ensaladas.' },
     { id: 4, name: 'Zanahoria', price: 1.20, image: 'https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&w=300&h=200&q=80', category: 'Frutas y Verduras', featured: false, description: 'Zanahorias frescas y orgánicas, ricas en vitamina A.' },

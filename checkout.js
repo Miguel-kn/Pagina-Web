@@ -56,15 +56,30 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // --- SIMULACIÓN DE PAGO EXITOSO ---
-        // 1. Mostrar un mensaje de éxito
-        alert('¡Gracias por tu compra! Tu pedido ha sido procesado exitosamente.');
+        // --- PROCESAR PAGO Y GENERAR ORDEN ---
+        // 1. Recopilar datos del formulario y del carrito
+        const customerData = {
+            name: document.getElementById('fullName').value,
+            email: document.getElementById('email').value,
+            address: document.getElementById('address').value,
+        };
 
-        // 2. Limpiar el carrito en localStorage
+        const order = {
+            customer: customerData,
+            items: cart,
+            total: cart.reduce((sum, item) => sum + item.price, 0),
+            orderId: Date.now(), // ID de orden simple basado en la fecha
+            date: new Date().toLocaleDateString('es-ES')
+        };
+
+        // 2. Guardar la orden en sessionStorage para pasarla a la siguiente página
+        sessionStorage.setItem('lastOrder', JSON.stringify(order));
+
+        // 3. Limpiar el carrito en localStorage
         localStorage.removeItem('ecoMarketCart');
 
-        // 3. Redirigir al usuario a la página de inicio
-        window.location.href = 'index.html';
+        // 4. Redirigir al usuario a la página de la boleta
+        window.location.href = 'boleta.html';
     }
 
     // --- 4. EVENT LISTENERS ---
