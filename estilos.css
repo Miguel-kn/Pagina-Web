@@ -1,0 +1,70 @@
+/* c:\Sem II\programcion web\trabajo-final\estilos.css */
+
+body {
+    background-color: #f8f9fa; /* Un fondo ligeramente gris para que el contenido blanco resalte */
+}
+
+/* Estilo para el ícono del carrito para posicionar el contador */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Estilos para las tarjetas de producto */
+.card {
+    border: 1px solid #e9ecef; /* Borde sutil */
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+/* Estilos para el carrusel */
+.carousel-item img {
+    border-radius: 0.5rem; /* Bordes redondeados para las imágenes del carrusel */
+}
+
+/* Estilos para el contenedor de búsqueda y carrito */
+.header-search-cart-wrapper {
+    flex-grow: 1;
+}
+
+.img-superfoods {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajusta la altura máxima según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+
+/* Para pantallas medianas y más pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    .header-search-cart-wrapper {
+        width: 100%; /* Ocupa todo el ancho */
+        order: 3; /* Se posiciona al final del contenedor flex */
+        margin-top: 1rem; /* Espacio superior para separarlo del logo */
+    }
+
+    .nav-pills .nav-link {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente en los filtros */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .header-main .h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del logo "EcoMarket" */
+    }
+}
